@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@mixin responsive($size) {
+  @if ($size == "desktop") {
+    @media (min-width: 768.1px) {
+      @content;
+    }
+  } @else if($size == "mobile") {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}
+
+@font-face {
+  font-family: "Gt america standard";
+  src: url("../fonts/GT-America-Standard-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gt America ExpandedBold";
+  src: url("../fonts/GT-America-Expanded-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ivarfine";
+  src: url("../fonts/IvarFine-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Suisseintl";
+  src: url("../fonts/SuisseIntl-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Suisseintl";
+  src: url("../fonts/SuisseIntl-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Suisseintl";
+  src: url("../fonts/SuisseIntl-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GEDinarTwo";
+  src: url("../fonts/GEDinarTwo-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --dark-green: #024729;
+  --white: white;
+  --medium-aquamarine: #45b190;
+  --light-green: #c6e3d8;
+}
+$ff-poppins: "Poppins", sans-serif;
+$ff-jose: "Josefin Sans", sans-serif;
+$ff-Suisseintl: "Suisseintl", sans-serif;
+$ff-GEDinarTwo: "GEDinarTwo", sans-serif;
+$ff-gt-american-bold: "Gt America ExpandedBold", sans-serif;
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--light-green);
+  font-family: $ff-Suisseintl;
+  direction: rtl;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3 {
+  font-family: $ff-GEDinarTwo;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.text-green_ {
+  color: #007201;
+}
+
+.content-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.text-light-green {
+  color: var(--medium-aquamarine);
+}
+
+.bg_mask {
+  background-color: var(--light-green);
+  position: absolute;
+  top: 0;
+  mix-blend-mode: multiply;
+  width: 636px;
+  height: 671.783px;
+  @include responsive("mobile") {
+    height: 100%;
+    width: 94.1%;
+  }
+}
+
+main {
+  max-width: 1320px;
+  margin-inline: auto;
+  overflow-x: hidden;
+  section {
+    &.hero-sec,
+    &.second-sec,
+    &.third-sec {
+      position: relative;
+      min-height: 100vh;
+    }
+    &.hero-sec {
+      img {
+        width: 400px;
+      }
+      .d-flex {
+        a {
+          &:first-child {
+            font-family: $ff-gt-american-bold;
+            text-transform: uppercase;
+          }
+          &:last-child {
+            font-family: $ff-Suisseintl;
+            font-weight: 700;
+          }
+          &:hover {
+            color: var(--medium-aquamarine);
+          }
+        }
+      }
+      .main-heading {
+        font-weight: 800;
+        font-family: $ff-jose;
+      }
+      .content {
+        span {
+          font-size: 60px;
+          font-weight: 700;
+          @include responsive("mobile") {
+            text-align: center;
+            font-size: 45px;
+          }
+        }
+      }
+    }
+    &.second-sec,
+    &.third-sec {
+      h2 {
+        font-size: 89px;
+        font-weight: 700;
+        @include responsive("mobile") {
+          font-size: 50px;
+        }
+      }
+      p {
+        font-size: 32px;
+        color: #fff;
+        letter-spacing: 1px;
+        padding-inline: 80px;
+        line-height: 3.5rem;
+        @include responsive("mobile") {
+          font-size: 18px;
+          padding-inline: 5px;
+        }
+      }
+    }
+    &.third-sec {
+      min-height: 800vh;
+      background: url("../img/bgline1.png") top / cover no-repeat;
+      .img-container {
+        width: 100%;
+        height: 350px;
+        display: flex;
+        overflow: hidden;
+        border-radius: 10px;
+        border: 3px solid var(--light-green);
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+      h3 {
+        font-size: 50px;
+        color: var(--medium-aquamarine);
+      }
+      .services-link {
+        a {
+          padding: 12px 20px;
+          border: 2px solid var(--medium-aquamarine);
+          color: #fff;
+          background-color: transparent;
+          border-radius: 50px;
+          font-size: 20px;
+          transition: all 0.5s ease;
+          width: 65%;
+          &:hover {
+            background-color: var(--medium-aquamarine);
+          }
+          @include responsive("mobile") {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -34,14 +34,16 @@
               <a class="text-center d-block my-5">الــــــــعربية</a>
             </div> -->
             <div
-              class="col-6 d-flex justify-content-center justify-content-md-end logo-animation content-center"
+              class="col-6 col-md-6 d-flex justify-content-center justify-content-md-end logo-animation content-center"
             >
               <div class="content">
                 <span class="d-block text-green_ text-center"></span>
               </div>
             </div>
-            <div class="col-6 logo-animation img-show position-relative">
-              <img src="img/map__.png" alt="map" />
+            <div
+              class="col-6 col-md-6 logo-animation img-show position-relative"
+            >
+              <img src="img/map_new.png" alt="map" />
               <!-- <div class="bg_mask"></div> -->
             </div>
           </div>
@@ -49,13 +51,27 @@
       </section>
       <section class="second-sec content-center mt-5 mt-lg-0">
         <div class="container">
-          <div class="row">
+          <div
+            class="row"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="0"
+            data-aos-offset="200"
+            data-aos-once="false"
+          >
             <div class="col-12">
-              <h2 class="mb-3 second_sec_heading_1 text-white text-center"></h2>
-              <h2
-                class="mb-3 second_sec_heading_2 text-light-green text-center"
-              ></h2>
-              <p class="second_sec_para text-center"></p>
+              <h2 class="mb-3 second_sec_heading_1 text-brown text-center">
+                أمانة منطقة الباحة
+              </h2>
+              <h2 class="mb-3 second_sec_heading_2 text-light-blue text-center">
+                محافظة العقيق
+              </h2>
+              <p class="second_sec_para text-center">
+                تبعد محافظة العقيق عن مدينة الباحة بمسافة 45 كم تقريباً وتقع
+                المحافظة في الشمال الشرقي كما يتسم مناخ محافظة العقيق بالمناخ
+                الصحراوي الحار وممطر ومعتدل في فصل الشتاء عدد سكانها 37,608 نسمة
+                .
+              </p>
             </div>
           </div>
         </div>
@@ -64,12 +80,23 @@
         class="third-sec d-flex flex-column justify-content-around mt-5 mt-lg-0"
       >
         <div class="container">
-          <div class="row">
+          <div
+            class="row"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+            data-aos-delay="0"
+            data-aos-offset="200"
+            data-aos-once="false"
+          >
             <div class="col-12">
-              <h2
-                class="mb-3 third_sec_heading_1 text-light-green text-center"
-              ></h2>
-              <p class="third_sec_para_1 text-center"></p>
+              <h2 class="mb-3 third_sec_heading_1 text-light-green text-center">
+                نزهتك كما تري
+              </h2>
+              <p class="third_sec_para_1 text-center">
+                أطلقت بلدية محافظة العقيق مبادرة نزهتك كما تريد والتي تساهم في
+                رفع جودة الخدمات التي تقدمها البلدية على الحدائق والمنتزهات
+                وحرصاً منا أصبح أختيارك لحديقتك عبر الباركود .
+              </p>
             </div>
           </div>
         </div>
@@ -658,21 +685,21 @@
 
         <div class="container-fluid">
           <div class="row">
-            <div class="col-12 bg-light-green mx-auto p-2">
+            <div class="col-12 bg-dark-blue mx-auto p-2">
               <div class="row">
                 <div
                   class="col-12 col-md-6 mb-3 mb-md-0 order-1 order-md-0 content-center gap-4"
                 >
                   <a
-                    class="text-white fz-2 d-block text-center"
+                    class="text-brown fz-2 d-block text-center"
                     target="_blank"
                     href="https://x.com/amgovsa?s=21"
                     >تويتر البلدية
                     <i class="fab fa-x-twitter"></i>
                   </a>
                   <a
-                    class="text-white fz-2 d-block text-center"
-                    href="https://x.com/amgovsa?s=21"
+                    class="text-brown fz-2 d-block text-center"
+                    href="tel:940"
                     >التواصل 940 &nbsp;<i class="fas fa-phone"></i>
                   </a>
                 </div>
@@ -680,10 +707,10 @@
                   class="col-12 col-md-6 mt-3 mt-md-0 mb-3 mb-md-0 content-center"
                 >
                   <div class="logo-img">
-                    <img src="img/footer_1.jfif" alt="logo-1" />
+                    <img src="img/footer_1.png" alt="logo-1" />
                   </div>
                   <div class="logo-img">
-                    <img src="img/footer_2.jfif" alt="logo-2" />
+                    <img src="img/footer_2.png" alt="logo-2" />
                   </div>
                 </div>
               </div>
@@ -733,90 +760,112 @@
         // Text Animation
         gsap.to(".content span", {
           scrollTrigger: ".content span",
-          text: "مبادرة<br>نزهتك كما تريد<br>2024",
+          text: "مبادرة نزهتك كما تريد<br><span>ادارة التحول الرقمي و تقنية المعلومات</span><br>2024",
           duration: 3,
           ease: "power1.inOut",
         });
-        // Second Section
-        gsap.fromTo(
-          ".second_sec_heading_1",
-          { rotationX: -90 },
-          {
-            scrollTrigger: ".second_sec_heading_1",
-            text: "أمانة منطقة الباحة",
-            duration: 2,
-            rotationX: 0,
-            ease: "power1.inOut",
-          }
-        );
-        gsap.fromTo(
-          ".second_sec_heading_2",
-          { rotationX: -90 },
-          {
-            scrollTrigger: ".second_sec_heading_2",
-            text: "محافظة العقيق",
-            duration: 2,
-            rotationX: 0,
-            ease: "power1.inOut",
-          }
-        );
-        gsap.to(".second_sec_para", {
-          scrollTrigger: ".second_sec_para",
-          text: "تبعد محافظة العقيق عن مدينة الباحة بمسافة 45 كم تقريباً وتقع المحافظة في الشمال الشرقي كما يتسم مناخ محافظة العقيق بالمناخ الصحراوي الحار وممطر ومعتدل في فصل الشتاء عدد سكانها 37,608 نسمة .",
-          duration: 5,
-          delay: 1.2,
-          ease: "power1.inOut",
-        });
+        // Second Section -----------------------------------------------
+        // gsap.fromTo(
+        //   ".second_sec_heading_1",
+        //   { rotationX: -90 },
+        //   {
+        //     scrollTrigger: ".second_sec_heading_1",
+        //     text: "أمانة منطقة الباحة",
+        //     duration: 2,
+        //     rotationX: 0,
+        //     ease: "power1.inOut",
+        //   }
+        // );
+        // gsap.fromTo(
+        //   ".second_sec_heading_2",
+        //   { rotationX: -90 },
+        //   {
+        //     scrollTrigger: ".second_sec_heading_2",
+        //     text: "محافظة العقيق",
+        //     duration: 2,
+        //     rotationX: 0,
+        //     ease: "power1.inOut",
+        //   }
+        // );
+        // gsap.to(".second_sec_para", {
+        //   scrollTrigger: ".second_sec_para",
+        //   text: "تبعد محافظة العقيق عن مدينة الباحة بمسافة 45 كم تقريباً وتقع المحافظة في الشمال الشرقي كما يتسم مناخ محافظة العقيق بالمناخ الصحراوي الحار وممطر ومعتدل في فصل الشتاء عدد سكانها 37,608 نسمة .",
+        //   duration: 5,
+        //   delay: 1.2,
+        //   ease: "power1.inOut",
+        // });
 
-        // Third Section
-        gsap.fromTo(
-          ".third_sec_heading_1",
-          { rotationX: -90 },
-          {
-            scrollTrigger: ".third_sec_heading_1",
-            text: "نزهتك كما تري",
-            duration: 2,
-            rotationX: 0,
-            ease: "power1.inOut",
-          }
-        );
-        gsap.to(".third_sec_para_1", {
-          scrollTrigger: ".third_sec_para_1",
-          text: "أطلقت بلدية محافظة العقيق مبادرة نزهتك كما تريد والتي تساهم في رفع جودة الخدمات التي تقدمها البلدية على الحدائق والمنتزهات وحرصاً  منا أصبح أختيارك لحديقتك عبر الباركود .",
-          duration: 5,
-          delay: 1.2,
-          ease: "power1.inOut",
-        });
-        gsap.fromTo(
-          ".third_sec_heading_2",
-          { rotationX: -90 },
-          {
-            scrollTrigger: ".third_sec_heading_2",
-            text: "حديقة طيبة الاسم",
-            duration: 2,
-            rotationX: 0,
-            ease: "power1.inOut",
-          }
-        );
-        gsap.to(".third_sec_para_2", {
-          scrollTrigger: ".third_sec_para_2",
-          text: "تقع الحديقة جنوب المحافظة على طريق الملك فهد وبالقرب من جامعة الباحة وتعد أكبر حدائق المحافظة وأشهرها",
-          duration: 5,
-          delay: 1.2,
-          ease: "power1.inOut",
-        });
+        // Third Section -----------------------------------------------
+        // gsap.fromTo(
+        //   ".third_sec_heading_1",
+        //   { rotationX: -90 },
+        //   {
+        //     scrollTrigger: ".third_sec_heading_1",
+        //     text: "نزهتك كما تري",
+        //     duration: 2,
+        //     rotationX: 0,
+        //     ease: "power1.inOut",
+        //   }
+        // );
+        // gsap.to(".third_sec_para_1", {
+        //   scrollTrigger: ".third_sec_para_1",
+        //   text: "أطلقت بلدية محافظة العقيق مبادرة نزهتك كما تريد والتي تساهم في رفع جودة الخدمات التي تقدمها البلدية على الحدائق والمنتزهات وحرصاً  منا أصبح أختيارك لحديقتك عبر الباركود .",
+        //   duration: 5,
+        //   delay: 1.2,
+        //   ease: "power1.inOut",
+        // });
+        // gsap.fromTo(
+        //   ".third_sec_heading_2",
+        //   { rotationX: -90 },
+        //   {
+        //     scrollTrigger: ".third_sec_heading_2",
+        //     text: "حديقة طيبة الاسم",
+        //     duration: 2,
+        //     rotationX: 0,
+        //     ease: "power1.inOut",
+        //   }
+        // );
+        // gsap.to(".third_sec_para_2", {
+        //   scrollTrigger: ".third_sec_para_2",
+        //   text: "تقع الحديقة جنوب المحافظة على طريق الملك فهد وبالقرب من جامعة الباحة وتعد أكبر حدائق المحافظة وأشهرها",
+        //   duration: 5,
+        //   delay: 1.2,
+        //   ease: "power1.inOut",
+        // });
+
+        // Linear-Gradient ------------------------------------
+        // let b1 =
+        //   "linear-gradient(217deg, rgba(255,0,0,.9), rgba(255,0,0,0) 70.71%),  linear-gradient(127deg, rgba(0,255,0,.9), rgba(0,255,0,0) 70.71%), linear-gradient(336deg, rgba(0,0,255,.9), rgba(0,0,255,0) 70.71%)";
+        // let b2 =
+        //   "linear-gradient(17deg, rgba(255,0,0,.7), rgba(255,0,0,0) 70.71%), linear-gradient(200deg, rgba(0, 255, 0, .9), rgba(0,255,0,.2) 70.71%),  linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0.1) 70.71%)";
+
+        // gsap.fromTo(
+        //   "body",
+        //   { background: b1 },
+        //   {
+        //     scrollTrigger: {
+        //       trigger: ".second-sec",
+        //       scrub: true,
+        //     },
+        //     background: b2
+        //   },
+        // );
 
         gsap.fromTo(
           "body",
           {
-            backgroundColor: gsap.getProperty("html", "--light-green"),
+            background: gsap.getProperty("html", "--light-blue"),
+            // "--light-bg-green": "#45b190",
+            // "--dark-bg-green": "#024729",
           },
           {
             scrollTrigger: {
               trigger: ".second-sec",
               scrub: true,
             },
-            backgroundColor: gsap.getProperty("html", "--dark-green"),
+            background: gsap.getProperty("html", "--blue"),
+            // "--light-bg-green": "#024729",
+            // "--dark-bg-green": "#45b190",
           }
         );
       });

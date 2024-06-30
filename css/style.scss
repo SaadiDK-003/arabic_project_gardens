@@ -63,10 +63,17 @@
 }
 
 :root {
+  --light-green: #c6e3d8;
   --dark-green: #024729;
+  --light-bg-green: #c6e3d8;
+  --dark-bg-green: #024729;
+  --light-blue: #87b3c7;
+  --light-brown: #e4c892;
+  --blue: #26698b;
+  --brown: #b59450;
   --white: white;
   --medium-aquamarine: #45b190;
-  --light-green: #c6e3d8;
+  --dark-blue: #0d415c;
 }
 $ff-poppins: "Poppins", sans-serif;
 $ff-jose: "Josefin Sans", sans-serif;
@@ -78,7 +85,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-color: var(--light-green);
+  background-color: var(--blue);
+  // background: linear-gradient(90deg, var(--blue) 10%, var(--brown) 80%);
   font-family: $ff-Suisseintl;
   direction: rtl;
   overflow-x: hidden;
@@ -99,7 +107,18 @@ img {
 }
 
 .text-green_ {
-  color: #007201;
+  color: var(--blue);
+}
+
+.text-light-blue {
+  color: var(--light-blue);
+}
+
+.text-blue {
+  color: var(--blue);
+}
+.text-brown {
+  color: var(--brown);
 }
 
 .content-center {
@@ -108,10 +127,26 @@ img {
   justify-content: center;
 }
 .text-light-green {
-  color: var(--medium-aquamarine);
+  // color: var(--medium-aquamarine);
+  color: var(--brown);
 }
 .bg-light-green {
   background-color: var(--medium-aquamarine);
+}
+.bg-brown {
+  background-color: var(--brown);
+}
+.bg-light-brown {
+  background-color: var(--light-brown);
+}
+.bg-blue {
+  background-color: var(--blue);
+}
+.bg-light-blue {
+  background-color: var(--light-blue);
+}
+.bg-dark-blue {
+  background-color: var(--dark-blue);
 }
 .bg_mask {
   background-color: var(--light-green);
@@ -140,6 +175,11 @@ main {
     &.hero-sec {
       img {
         width: 400px;
+        @include responsive("mobile") {
+          width: 100%;
+          // display: block;
+          // margin-inline: auto;
+        }
       }
       .d-flex {
         a {
@@ -161,12 +201,24 @@ main {
         font-family: $ff-jose;
       }
       .content {
+        padding-right: 20px;
         span {
           font-size: 60px;
           font-weight: 700;
+          color: var(--white);
+
+          text-align-last: right;
+          text-indent: -17px;
+
+          > span {
+            color: var(--blue);
+            font-size: 30px;
+          }
           @include responsive("mobile") {
-            text-align: center;
-            font-size: 35px;
+            font-size: 26px;
+            > span {
+              font-size: 18px;
+            }
           }
         }
       }
@@ -195,6 +247,7 @@ main {
     &.third-sec {
       min-height: 800vh;
       background: url("../img/bgline1.png") top / cover no-repeat;
+      // background: linear-gradient(90deg, var(--blue), var(--brown));
       .img-container {
         width: 100%;
         height: 350px;
@@ -214,12 +267,12 @@ main {
       }
       h3 {
         font-size: 50px;
-        color: var(--medium-aquamarine);
+        color: var(--brown);
       }
       .services-link {
         a {
           padding: 12px 20px;
-          border: 2px solid var(--medium-aquamarine);
+          border: 2px solid var(--brown);
           color: #fff;
           background-color: transparent;
           border-radius: 50px;
@@ -227,7 +280,7 @@ main {
           transition: all 0.5s ease;
           width: 65%;
           &:hover {
-            background-color: var(--medium-aquamarine);
+            background-color: var(--brown);
           }
           @include responsive("mobile") {
             width: 100% !important;
@@ -238,7 +291,7 @@ main {
         width: 100px;
         height: 100px;
         overflow: hidden;
-        border: 2px solid var(--medium-aquamarine);
+        // border: 2px solid var(--medium-aquamarine);
         border-radius: 10px;
       }
       .bg-light-green {

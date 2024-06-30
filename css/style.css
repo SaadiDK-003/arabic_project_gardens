@@ -49,10 +49,17 @@
   font-display: swap;
 }
 :root {
+  --light-green: #c6e3d8;
   --dark-green: #024729;
+  --light-bg-green: #c6e3d8;
+  --dark-bg-green: #024729;
+  --light-blue: #87b3c7;
+  --light-brown: #e4c892;
+  --blue: #26698b;
+  --brown: #b59450;
   --white: white;
   --medium-aquamarine: #45b190;
-  --light-green: #c6e3d8;
+  --dark-blue: #0d415c;
 }
 
 html {
@@ -60,7 +67,7 @@ html {
 }
 
 body {
-  background-color: var(--light-green);
+  background-color: var(--blue);
   font-family: "Suisseintl", sans-serif;
   direction: rtl;
   overflow-x: hidden;
@@ -84,7 +91,19 @@ img {
 }
 
 .text-green_ {
-  color: #007201;
+  color: var(--blue);
+}
+
+.text-light-blue {
+  color: var(--light-blue);
+}
+
+.text-blue {
+  color: var(--blue);
+}
+
+.text-brown {
+  color: var(--brown);
 }
 
 .content-center {
@@ -94,11 +113,31 @@ img {
 }
 
 .text-light-green {
-  color: var(--medium-aquamarine);
+  color: var(--brown);
 }
 
 .bg-light-green {
   background-color: var(--medium-aquamarine);
+}
+
+.bg-brown {
+  background-color: var(--brown);
+}
+
+.bg-light-brown {
+  background-color: var(--light-brown);
+}
+
+.bg-blue {
+  background-color: var(--blue);
+}
+
+.bg-light-blue {
+  background-color: var(--light-blue);
+}
+
+.bg-dark-blue {
+  background-color: var(--dark-blue);
 }
 
 .bg_mask {
@@ -126,6 +165,11 @@ main section.hero-sec, main section.second-sec, main section.third-sec {
 main section.hero-sec img {
   width: 400px;
 }
+@media (max-width: 768px) {
+  main section.hero-sec img {
+    width: 100%;
+  }
+}
 main section.hero-sec .d-flex a:first-child {
   font-family: "Gt America ExpandedBold", sans-serif;
   text-transform: uppercase;
@@ -141,14 +185,26 @@ main section.hero-sec .main-heading {
   font-weight: 800;
   font-family: "Josefin Sans", sans-serif;
 }
+main section.hero-sec .content {
+  padding-right: 20px;
+}
 main section.hero-sec .content span {
   font-size: 60px;
   font-weight: 700;
+  color: var(--white);
+  text-align-last: right;
+  text-indent: -17px;
+}
+main section.hero-sec .content span > span {
+  color: var(--blue);
+  font-size: 30px;
 }
 @media (max-width: 768px) {
   main section.hero-sec .content span {
-    text-align: center;
-    font-size: 35px;
+    font-size: 26px;
+  }
+  main section.hero-sec .content span > span {
+    font-size: 18px;
   }
 }
 main section.second-sec h2, main section.third-sec h2 {
@@ -198,11 +254,11 @@ main section.third-sec .img-container img {
 }
 main section.third-sec h3 {
   font-size: 50px;
-  color: var(--medium-aquamarine);
+  color: var(--brown);
 }
 main section.third-sec .services-link a {
   padding: 12px 20px;
-  border: 2px solid var(--medium-aquamarine);
+  border: 2px solid var(--brown);
   color: #fff;
   background-color: transparent;
   border-radius: 50px;
@@ -211,7 +267,7 @@ main section.third-sec .services-link a {
   width: 65%;
 }
 main section.third-sec .services-link a:hover {
-  background-color: var(--medium-aquamarine);
+  background-color: var(--brown);
 }
 @media (max-width: 768px) {
   main section.third-sec .services-link a {
@@ -222,7 +278,6 @@ main section.third-sec .logo-img {
   width: 100px;
   height: 100px;
   overflow: hidden;
-  border: 2px solid var(--medium-aquamarine);
   border-radius: 10px;
 }
 main section.third-sec .bg-light-green {

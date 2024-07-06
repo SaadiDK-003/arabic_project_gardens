@@ -208,16 +208,11 @@ main {
           color: var(--white);
 
           text-align-last: right;
-          text-indent: -17px;
-
-          > span {
-            color: var(--blue);
-            font-size: 30px;
-          }
+          // text-indent: -17px;
           @include responsive("mobile") {
             font-size: 26px;
             > span {
-              font-size: 18px;
+              // font-size: 18px;
             }
           }
         }

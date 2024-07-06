@@ -193,18 +193,10 @@ main section.hero-sec .content span {
   font-weight: 700;
   color: var(--white);
   text-align-last: right;
-  text-indent: -17px;
-}
-main section.hero-sec .content span > span {
-  color: var(--blue);
-  font-size: 30px;
 }
 @media (max-width: 768px) {
   main section.hero-sec .content span {
     font-size: 26px;
-  }
-  main section.hero-sec .content span > span {
-    font-size: 18px;
   }
 }
 main section.second-sec h2, main section.third-sec h2 {

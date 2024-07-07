@@ -199,6 +199,11 @@ main section.hero-sec .content span {
     font-size: 26px;
   }
 }
+@media (max-width: 390px) {
+  main section.hero-sec .content span {
+    font-size: 21px;
+  }
+}
 main section.second-sec h2, main section.third-sec h2 {
   font-size: 89px;
   font-weight: 700;

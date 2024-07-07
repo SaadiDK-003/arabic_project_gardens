@@ -9,6 +9,10 @@
     @media (max-width: 768px) {
       @content;
     }
+  } @else if($size == "sm-mobile") {
+    @media (max-width: 390px) {
+      @content;
+    }
   }
 }
 
@@ -206,14 +210,13 @@ main {
           font-size: 60px;
           font-weight: 700;
           color: var(--white);
-
           text-align-last: right;
           // text-indent: -17px;
           @include responsive("mobile") {
             font-size: 26px;
-            > span {
-              // font-size: 18px;
-            }
+          }
+          @include responsive("sm-mobile") {
+            font-size: 21px;
           }
         }
       }
